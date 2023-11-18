@@ -13,6 +13,9 @@ public class GemSpawner : MonoBehaviour
 
     private ARTrackedImageManager arTrackedImageManager;
 
+    // Specify the name or index of the image from the library that should trigger the ship appearance
+    [SerializeField] private string targetImageName = "cavescene"; 
+
     private void OnEnable()
     {
         arTrackedImageManager = gameObject.GetComponent<ARTrackedImageManager>();
@@ -23,15 +26,16 @@ public class GemSpawner : MonoBehaviour
     {
         foreach (ARTrackedImage image in obj.added)
         {
-            // Instantiate the basket at the specified position without applying offset
-            // spawnedBasket = Instantiate(basketPrefab, image.transform.position, Quaternion.identity);
-
-            // Iterate through gem prefabs and instantiate each at its own position without applying offset
-            for (int i = 0; i < gemPrefabs.Count; i++)
+            // Check if the recognized image matches the target image            
+            if (image.referenceImage.name == targetImageName)
             {
-                GameObject gem = Instantiate(gemPrefabs[i], gemPrefabs[i].transform.position, Quaternion.identity);
-                // gem.transform.parent = spawnedBasket.transform; // Gems are children of the basket
-                spawnedGems.Add(gem);
+                // Iterate through gem prefabs and instantiate each at its own position without applying offset
+                for (int i = 0; i < gemPrefabs.Count; i++)
+                {
+                    GameObject gem = Instantiate(gemPrefabs[i], gemPrefabs[i].transform.position, Quaternion.identity);
+                    // gem.transform.parent = spawnedBasket.transform; // Gems are children of the basket
+                    spawnedGems.Add(gem);
+                }
             }
         }
     }
