@@ -9,6 +9,6 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1); //or do SceneManager.LoadScene("SceneName");
+        SceneManager.LoadScene(currentSceneIndex + 2); //or do SceneManager.LoadScene("SceneName");
     }
 }
