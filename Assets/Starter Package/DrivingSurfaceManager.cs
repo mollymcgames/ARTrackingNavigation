@@ -43,7 +43,9 @@ public class DrivingSurfaceManager : MonoBehaviour
 
     private void Start()
     {
-        PlaneManager = GetComponent<ARPlaneManager>();
+        //PlaneManager = GetComponent<ARPlaneManager>();
+        PlaneManager = GetComponent<ARPlaneManager>(); 
+        RaycastManager = GetComponent<ARRaycastManager>();
     }
 
     private void Update()

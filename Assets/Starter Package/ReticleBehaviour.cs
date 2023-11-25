@@ -38,6 +38,33 @@ public class ReticleBehaviour : MonoBehaviour
 
     private void Update()
     {
-        // TODO: Conduct a ray cast to position this object.
+        //Determine the centre of the screen using the Cameras viewporttoScreen point
+        var screenCenter = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0f));
+
+        //user this point to conduct the raycast
+        var hits = new List<ARRaycastHit>();
+        DrivingSurfaceManager.RaycastManager.Raycast(screenCenter, hits, TrackableType.PlaneWithinBounds);
+
+        CurrentPlane = null;
+        ARRaycastHit? hit = null;
+        if (hits.Count > 0)
+        {
+            // If you don't have a locked plane already...
+            var lockedPlane = DrivingSurfaceManager.LockedPlane;
+            hit = lockedPlane == null
+                // ... use the first hit in `hits`.
+                ? hits[0]
+                // Otherwise use the locked plane, if it's there.
+                : hits.SingleOrDefault(x => x.trackableId == lockedPlane.trackableId);
+        }
+
+        if (hit.HasValue)
+        {
+            CurrentPlane = DrivingSurfaceManager.PlaneManager.GetPlane(hit.Value.trackableId);
+            // Move this reticle to the location of the hit.
+            transform.position = hit.Value.pose.position;
+        }
+        Child.SetActive(CurrentPlane != null);
+
     }
 }
