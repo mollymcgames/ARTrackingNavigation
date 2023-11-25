@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gemstone.unity
     guid: 644c18b23c2f1094ca86c8987b0d7c1d
+  - enabled: 1
+    path: Assets/Scenes/cars.unity
+    guid: 1eb56079df144c143adc08ca8bb1b853
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0017fc4f2d4d8e041825943ebb6d020e, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 0d656be25fcae4842b9c337bb0cf9e02, type: 2}
