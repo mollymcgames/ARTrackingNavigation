@@ -15,6 +15,6 @@ public class SceneSwitcher : MonoBehaviour
     //load the scene called cars
     public void LoadCarsScene()
     {
-        SceneManager.LoadScene("cars");
+        SceneManager.LoadScene("ShipSteering");
     }
 }
