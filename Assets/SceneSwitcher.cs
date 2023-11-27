@@ -17,4 +17,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("ShipSteering");
     }
+
+    public void LoadShooterGame()
+    {
+        SceneManager.LoadScene("ShooterGame");
+    }    
 }
