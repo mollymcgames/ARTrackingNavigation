@@ -305,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DrivingSurfaceManager: {fileID: 1079497529}
   Package: {fileID: 0}
-  PackagePrefab: {fileID: 117430, guid: f56df44f2436f1f42821acb8fe1ec8d1, type: 3}
+  PackagePrefab: {fileID: 115298, guid: 4ed3d4737085031488d31a766909bf88, type: 3}
 --- !u!4 &206288168
 Transform:
   m_ObjectHideFlags: 0
