@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShootScript : MonoBehaviour
 {
     public GameObject arCamera;
     public GameObject smoke;
+
+    public TextMeshProUGUI scoreText; //reference to the score
+    private int score = 0; //score starts at 0
 
     public void Shoot()
     {
@@ -17,6 +21,10 @@ public class ShootScript : MonoBehaviour
                 Instantiate(smoke, hit.point, Quaternion.LookRotation(hit.normal)); //might need to change
                 // Instantiate(smoke, hit.transform.position, Quaternion.identity); //might need to change
                 Destroy(hit.transform.gameObject);
+
+                //Update the score and the text
+                score++;
+                scoreText.text = "Score: " + score.ToString();
             }
         }
     }
