@@ -17,7 +17,7 @@ public class SpawnScript : MonoBehaviour
     IEnumerator StartSpawning()
     {
         yield return new WaitForSeconds(4);
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) //change based on number of objects
         {
             Instantiate(gems[i], spawnPoints[i].position, Quaternion.identity);
         }

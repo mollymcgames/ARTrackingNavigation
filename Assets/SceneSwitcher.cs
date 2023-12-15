@@ -9,7 +9,7 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadNextScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 2); //or do SceneManager.LoadScene("SceneName");
+        SceneManager.LoadScene(currentSceneIndex + 1); //or do SceneManager.LoadScene("SceneName");
     }
 
     //load the scene called cars
@@ -21,5 +21,10 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadShooterGame()
     {
         SceneManager.LoadScene("ShooterGame");
-    }    
+    }
+
+    public void ARScene()
+    {
+        SceneManager.LoadScene("ARScene");
+    }
 }
