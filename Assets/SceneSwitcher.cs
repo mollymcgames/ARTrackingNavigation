@@ -27,4 +27,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("ARScene");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
