@@ -801,7 +801,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1074211421}
         m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: LoadCarsScene
+        m_MethodName: LoadShipScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

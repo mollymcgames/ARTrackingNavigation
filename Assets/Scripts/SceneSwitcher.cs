@@ -12,11 +12,16 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1); //or do SceneManager.LoadScene("SceneName");
     }
 
-    //load the scene called cars
-    public void LoadCarsScene()
+    public void LoadShipScene()
     {
         SceneManager.LoadScene("ShipSteering");
-    }
+    }   
+
+
+    public void LoadMine()
+    {
+        SceneManager.LoadScene("Mine");
+    }        
 
     public void LoadShooterGame()
     {
@@ -26,6 +31,11 @@ public class SceneSwitcher : MonoBehaviour
     public void ARScene()
     {
         SceneManager.LoadScene("ARScene");
+    }
+
+    public void LoadHome()
+    {
+        SceneManager.LoadScene("Home");
     }
 
     public void QuitGame()

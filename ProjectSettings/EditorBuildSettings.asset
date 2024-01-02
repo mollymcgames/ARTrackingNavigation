@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/First.unity
     guid: 7ada820c917450243b3de171b6f931ec
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Home.unity
     guid: d4bc5fc9aeff25b4da2eb7f2a51c2294
   - enabled: 1
     path: Assets/Scenes/ItemSorting.unity
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShooterGame.unity
     guid: 2782704dd089ac04784a8accef86df6a
+  - enabled: 1
+    path: Assets/Scenes/Mine.unity
+    guid: f9ba358d027bb7b4a892cd387d136ed2
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0017fc4f2d4d8e041825943ebb6d020e, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 0d656be25fcae4842b9c337bb0cf9e02, type: 2}
