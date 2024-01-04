@@ -12,6 +12,12 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1); //or do SceneManager.LoadScene("SceneName");
     }
 
+    public void LoadPreviousScreen()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex - 1); //or do SceneManager.LoadScene("SceneName");
+    }
+
     public void LoadShipScene()
     {
         SceneManager.LoadScene("ShipSteering");
@@ -36,6 +42,11 @@ public class SceneSwitcher : MonoBehaviour
     public void LoadHome()
     {
         SceneManager.LoadScene("Home");
+    }
+
+    public void LoadSettings()
+    {
+        SceneManager.LoadScene("Settings");
     }
 
     public void QuitGame()
