@@ -48,9 +48,54 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Settings");
     }
+    
+    public void LoadBook()
+    {
+        SceneManager.LoadScene("Book");
+    }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadChapter1()
+    {
+        SceneManager.LoadScene("Chapter1");
+    }
+
+    public void LoadChapter2()
+    {
+        SceneManager.LoadScene("Chapter2");
+    }
+
+    public void LoadChapter3()
+    {
+        SceneManager.LoadScene("Chapter3");
+    }
+
+    public void LoadChapter4()
+    {
+        SceneManager.LoadScene("Chapter4");
+    }
+
+    public void LoadChapter5()
+    {
+        SceneManager.LoadScene("Chapter5");
+    }
+
+    public void LoadChapter6()
+    {
+        SceneManager.LoadScene("Chapter6");
+    }
+
+    public void LoadChapter7()
+    {
+        SceneManager.LoadScene("Chapter7");
+    }
+
+    public void LoadChapter8()
+    {
+        SceneManager.LoadScene("Chapter8");
     }
 }
