@@ -4,25 +4,25 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
 /**
- * Spawns a <see cref="CarBehaviour"/> when a plane is tapped.
+ * Spawns a <see cref="ShipBehaviour"/> when a plane is tapped.
  */
-public class CarManager : MonoBehaviour
+public class ShipManager : MonoBehaviour
 {
-    public GameObject CarPrefab;
+    public GameObject ShipPrefab;
     public ReticleBehaviour Reticle;
     public DrivingSurfaceManager DrivingSurfaceManager;
 
-    public CarBehaviour Car;
+    public ShipBehaviour Ship;
 
     private void Update()
     {
-        if (Car == null && WasTapped() && Reticle.CurrentPlane != null)
+        if (Ship == null && WasTapped() && Reticle.CurrentPlane != null)
         {
             // Spawn our car at the reticle location.
-            var obj = GameObject.Instantiate(CarPrefab);
-            Car = obj.GetComponent<CarBehaviour>();
-            Car.Reticle = Reticle;
-            Car.transform.position = Reticle.transform.position;
+            var obj = GameObject.Instantiate(ShipPrefab);
+            Ship = obj.GetComponent<ShipBehaviour>();
+            Ship.Reticle = Reticle;
+            Ship.transform.position = Reticle.transform.position;
             DrivingSurfaceManager.LockPlane(Reticle.CurrentPlane);
         }
     }

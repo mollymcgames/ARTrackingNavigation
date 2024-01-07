@@ -4,7 +4,7 @@ using UnityEngine;
 /**
  * Our car will track a reticle and collide with a <see cref="PackageBehaviour"/>.
  */
-public class CarBehaviour : MonoBehaviour
+public class ShipBehaviour : MonoBehaviour
 {
     public ReticleBehaviour Reticle;
     public float Speed = 1.2f;
