@@ -98,4 +98,9 @@ public class SceneSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Chapter8");
     }
+
+    public void LoadRunner()
+    {
+        SceneManager.LoadScene("main");
+    }
 }
