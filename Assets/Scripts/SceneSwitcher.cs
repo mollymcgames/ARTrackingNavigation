@@ -101,6 +101,6 @@ public class SceneSwitcher : MonoBehaviour
 
     public void LoadRunner()
     {
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("Runner");
     }
 }
