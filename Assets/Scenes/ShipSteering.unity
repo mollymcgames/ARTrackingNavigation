@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f261273b169e4469c8cf1d4facb4cb8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NavigationSurfaceManager: {fileID: 0}
+  DrivingSurfaceManager: {fileID: 1079497529}
   Package: {fileID: 0}
   PackagePrefab: {fileID: 115298, guid: 4ed3d4737085031488d31a766909bf88, type: 3}
 --- !u!1001 &311361592
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Child: {fileID: 0}
-  NavigationSurfaceManager: {fileID: 0}
+  DrivingSurfaceManager: {fileID: 1079497529}
   CurrentPlane: {fileID: 0}
 --- !u!1 &476033145
 GameObject:
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShipPrefab: {fileID: 8791712370855256624, guid: 98982de9783a6154a87114379e94436c, type: 3}
   Reticle: {fileID: 311361594}
-  NavigationSurfaceManager: {fileID: 0}
+  DrivingSurfaceManager: {fileID: 1079497529}
   Ship: {fileID: 0}
 --- !u!4 &540865293
 Transform:
